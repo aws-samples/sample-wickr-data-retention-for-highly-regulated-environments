@@ -38,7 +38,7 @@ Before you begin, ensure you have the following prerequisites installed and conf
 
 ### Required Software Dependencies
 
-#### 1. Node.js (Version 18.x or later)
+#### 1. Node.js (Version 22.x or later)
 
 Node.js is required to run the CDK toolkit and manage project dependencies.
 
@@ -129,8 +129,8 @@ cdk bootstrap aws://123456789012/us-east-1
 ### 1. Clone and Setup Project
 
 ```bash
-# Clone the repository (if applicable)
-git clone <repository-url>
+# Clone the repository
+git clone https://github.com/aws-samples/sample-wickr-data-retention-for-highly-regulated-environments.git
 cd Wickr-DataRetention-Bot
 
 # Install project dependencies
