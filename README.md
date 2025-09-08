@@ -375,6 +375,22 @@ After successful deployment of both stacks, complete these final configuration s
 - Corporate intranet download
 - Include in Wickr client deployment packages
 
+4. **Delete Public Key from S3 (Security Best Practice)**:
+
+   **Why this step is necessary**: After distributing the public key to all users, the key should be removed from S3 to reduce the attack surface.
+
+   **Delete the public key**:
+
+   ```bash
+   aws s3 rm s3://{your-prefix}-data-retention/bot_public_key.txt
+   ```
+
+   **Important Security Notes**:
+
+   - Only delete the key after confirming all users have received it
+   - Store a backup copy in your organization's secure key management system
+   - The bot will continue to function normally after the public key is deleted from S3
+
 #### Step 2: Activate Data Retention in Wickr
 
 **Why this step is necessary**: Data retention must be explicitly activated in the Wickr admin console to begin capturing messages.
